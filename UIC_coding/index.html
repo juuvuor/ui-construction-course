@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Marko's Wonderland Ticket System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+</head>
+
+<body>
+    <main class="container" style="position:relative;">
+        <button class="info-btn" id="infoBtn" title="Info">&#9432;</button>
+        <h1>Marko's Wonderland</h1>
+        <p>Get your ticket here</p>
+        <div id="successNotif" class="notification success" role="alert">
+            Ticket purchased successfully! Please redeem it at the inspector before buying another.
+        </div>
+        <div id="errorNotif" class="notification error" role="alert">
+            Error: You cannot redeem your ticket currently. Please see the inspector at the entrance.
+        </div>
+        <div id="errorBuyNotif" class="notification error" role="alert">
+            Error: You cannot buy a another ticket. Please redeem your current ticket first.
+        </div>
+        <div id="infoNotif" class="notification info" role="alert">
+            You can only buy one ticket at a time. Please redeem your ticket before buying another.
+        </div>
+        <div id="ticketStatus" class="ticket-status"></div>
+        <button class="buy-btn" id="buyBtn">Buy a ticket</button>
+        <button class="redeem-btn" id="redeemBtn">Redeem your ticket</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

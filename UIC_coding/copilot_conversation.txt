@@ -1,0 +1,87 @@
+User prompt 1:
+Change files that way that when you have buyed the ticket you can't buy another. Until the one is used. 
+
+Copilot answer 1:
+You can now only buy a ticket if you haven't already bought one. After buying, the "Buy a ticket" button is disabled until you redeem your ticket, at which point you can buy again. The buttons are enabled/disabled accordingly on page load and after each action.
+
+Let me know if you want to adjust the logic or button behavior!
+
+---
+
+User prompt 2:
+hide the other button when it is not possible to use
+
+Copilot answer 2:
+Now, only the button that is usable ("Buy a ticket" or "Redeem your ticket") will be visible at any time. The other button will be hidden until it becomes available to use.
+
+Let me know if you want further adjustments!
+
+---
+
+User prompt 3:
+make a small tound info butto that opens a notification window. Window should say something like, you can only buy one ticket at time 
+
+Copilot answer 3:
+A small round info button (ℹ️) has been added. When clicked, it opens a notification window saying "You can only buy one ticket at a time." The info notification is styled to match your UI.
+
+Let me know if you want to adjust the text, icon, or placement!
+
+---
+
+User prompt 4:
+but info button in right corner top. don't give a background
+
+Copilot answer 4:
+The info button is now positioned in the top right corner of the container, with no background and a clear info color. The style is clean and modern, and the button remains visible and accessible.
+
+Let me know if you want to further adjust its appearance or placement!
+
+---
+
+User prompt 5:
+Print all my prompts and your answers to one single text file.  (See <attachments> above for file contents. You may not need to search or read the file again.)
+
+Copilot answer 5:
+(This file)
+
+---
+
+User prompt 6:
+remove background effect
+
+Copilot answer 6:
+The background effect has been removed. Your page now uses a simple solid background color. Let me know if you want to adjust the color or make any other changes!
+
+---
+
+User prompt 7:
+it looks bad in phone 
+
+Copilot answer 7:
+The site is now more mobile-friendly: the container and buttons are nearly full width, padding and font sizes are reduced, and notifications are easier to read on small screens. Reload on your phone to see the improved layout! Let me know if you want further tweaks for mobile.
+
+---
+
+User prompt 8:
+Make info and error box that way that you can't do anything during the time it is shown. so you can't push other button same time when info tex is wisible
+
+Copilot answer 8:
+Now, when an info or error notification is shown, both buttons are disabled and cannot be clicked until the notification disappears. This ensures the user can't interact with the buttons while a message is visible. Let me know if you want to adjust the timing or add a visual indicator for the disabled state!
+
+---
+
+User prompt 9:
+when  phone is wertical and there is no room for showing info txt and buttons, put buttons to horisontal order.
+
+Copilot answer 9:
+On small vertical phone screens with limited height, the buttons will now appear side by side (horizontally) instead of stacked. This ensures both the info text and buttons are visible and usable.
+
+Let me know if you want to further adjust the responsive layout!
+
+---
+
+User prompt 10:
+write every pront and message to the txt file (See <attachments> above for file contents. You may not need to search or read the file again.)
+
+Copilot answer 10:
+(This file)

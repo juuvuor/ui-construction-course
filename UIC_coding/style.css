@@ -51,11 +51,17 @@ button {
     box-shadow: 0 1px 9px rgba(6, 18, 30, 0.08);
     background: #23232b;
     color: #fff;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     letter-spacing: 0.2px;
     margin-left: auto;
     margin-right: auto;
+}
+
+button:focus {
+    outline: 2px solid #ffe066;
+    outline-offset: 2px;
+    box-shadow: 0 1px 9px rgba(6, 18, 30, 0.08), 0 0 0 3px rgba(255, 224, 102, 0.3);
 }
 
 .buy-btn {
@@ -69,6 +75,31 @@ button {
     color: #fff;
 }
 
+.buy-btn.active {
+    border: 1.5px solid #ffe066;
+    background: #3a3a45;
+    color: #ffe066;
+    box-shadow: 0 2px 12px rgba(255, 224, 102, 0.2);
+}
+
+.buy-btn.active:hover {
+    background: #434350;
+    color: #ffe066;
+}
+
+.buy-btn.inactive {
+    border: 1.5px solid #666;
+    background: #1a1a1d;
+    color: #999;
+    cursor: pointer;
+}
+
+.buy-btn.inactive:hover {
+    background: #252528;
+    color: #bbb;
+    border-color: #777;
+}
+
 .redeem-btn {
     border: 1.5px solid #aaa;
     background: #23232b;
@@ -79,6 +110,31 @@ button {
     background: #2d2d2d;
     color: #fff;
     border-color: #fff;
+}
+
+.redeem-btn.active {
+    border: 1.5px solid #47d16a;
+    background: #2a3b2a;
+    color: #47d16a;
+    box-shadow: 0 2px 12px rgba(71, 209, 106, 0.15);
+}
+
+.redeem-btn.active:hover {
+    background: #334d33;
+    color: #47d16a;
+}
+
+.redeem-btn.inactive {
+    border: 1.5px solid #666;
+    background: #1a1a1d;
+    color: #999;
+    cursor: pointer;
+}
+
+.redeem-btn.inactive:hover {
+    background: #252528;
+    color: #bbb;
+    border-color: #777;
 }
 
 .notification {
@@ -147,6 +203,25 @@ button {
 .info-btn:hover {
     color: #b4aaff;
     background: none;
+}
+
+.info-btn:focus {
+    outline: 2px solid #ffe066;
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 @media (max-width: 600px) {

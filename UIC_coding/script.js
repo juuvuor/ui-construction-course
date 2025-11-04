@@ -17,7 +17,9 @@ function buyTicket() {
 
   if (ticketBought) {
     document.getElementById("errorBuyNotif").style.display = "block";
-    announceToScreenReader("Error: You cannot buy another ticket. Please redeem your current ticket first.");
+    announceToScreenReader(
+      "Error: You cannot buy another ticket. Please redeem your current ticket first."
+    );
     setTimeout(() => {
       hideNotifications();
       setButtonsDisabled(false);
@@ -26,7 +28,9 @@ function buyTicket() {
   }
 
   document.getElementById("successNotif").style.display = "block";
-  announceToScreenReader("Ticket purchased successfully! Please redeem it at the inspector before buying another.");
+  announceToScreenReader(
+    "Ticket purchased successfully! Please redeem it at the inspector before buying another."
+  );
   ticketBought = true;
   updateTicketStatus();
   setTimeout(() => {
@@ -38,19 +42,23 @@ function buyTicket() {
 function redeemTicket() {
   hideNotifications();
   setButtonsDisabled(true);
-  
+
   // For this demo and assignment we only display an error notification.
   // In a real implementation redeeming would trigger the redemption flow (e.g. open a popup or call an API).
   if (ticketBought) {
     document.getElementById("errorNotif").style.display = "block";
-    announceToScreenReader("Error: You cannot redeem your ticket currently. Please see the inspector at the entrance.");
+    announceToScreenReader(
+      "Error: You cannot redeem your ticket currently. Please see the inspector at the entrance."
+    );
     setTimeout(() => {
       hideNotifications();
       setButtonsDisabled(false);
     }, NOTIFICATION_TIMEOUT);
   } else {
     document.getElementById("errorRedeemNotif").style.display = "block";
-    announceToScreenReader("Error: You don't have a ticket. Please buy a ticket first.");
+    announceToScreenReader(
+      "Error: You don't have a ticket. Please buy a ticket first."
+    );
     setTimeout(() => {
       hideNotifications();
       setButtonsDisabled(false);
@@ -72,7 +80,9 @@ function showInfo() {
   hideNotifications();
   setButtonsDisabled(true);
   document.getElementById("infoNotif").style.display = "block";
-  announceToScreenReader("You can only buy one ticket at a time. Please redeem your ticket before buying another.");
+  announceToScreenReader(
+    "You can only buy one ticket at a time. Please redeem your ticket before buying another."
+  );
   setTimeout(() => {
     hideNotifications();
     setButtonsDisabled(false);
@@ -99,6 +109,7 @@ function announceToScreenReader(message) {
     region.textContent = "";
   }, 1000);
 }
+
 function updateTicketStatus() {
   const status = document.getElementById("ticketStatus");
   const buyBtn = document.getElementById("buyBtn");
@@ -123,7 +134,7 @@ function updateTicketStatus() {
  * @param {KeyboardEvent} event - The keyboard event
  */
 function handleKeyPress(event) {
-  if (event.key === 'Enter' || event.key === ' ') {
+  if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
     event.target.click();
   }
@@ -133,10 +144,10 @@ window.onload = function () {
   document.getElementById("buyBtn").onclick = buyTicket;
   document.getElementById("redeemBtn").onclick = redeemTicket;
   document.getElementById("infoBtn").onclick = showInfo;
-  
+
   document.getElementById("buyBtn").onkeydown = handleKeyPress;
   document.getElementById("redeemBtn").onkeydown = handleKeyPress;
   document.getElementById("infoBtn").onkeydown = handleKeyPress;
-  
+
   updateTicketStatus();
 };

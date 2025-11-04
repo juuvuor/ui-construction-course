@@ -1,3 +1,282 @@
+Disclosure: The following content includes prompts and responses generated during a coding session using AI tools to create a ticket purchasing web application. The conversation captures the iterative process of refining the application based on user requirements and feedback. Due to using two different AI tools, the timeline of the conversation may not be strictly chronological.
+
+Perplexity prompt 1: 
+
+Okay let's start building this app. Here is the things you need to keep in mind.   I want to use basic html,css js but also p5.js library to make site visually appearing.  The Scenario
+A tiny village in the middle of nowhere has one movie theater: *Marko's Wonderland*. Movie tickets can
+only be bought online and only one ticket at a time. The ticket must be redeemed in the presence of the
+inspector before entering the show. Most importantly, you cannot purchase a new ticket before
+redeeming the previously bought one.
+Your job is to build a simple version of their ticket system. In this scenario, a user attempts to buy a ticket
+and later tries to redeem it, encountering specific outcomes.
+Note: Implement only the specific scenario described. No need for a complete ticketing system or
+complex state management.
+CS-E5220 - User Interface Construction
+2025
+Instructions
+Pick an AI tool (Aalto AI Assistant, Claude, etc.) begin by using it to generate code for your webpage. You
+must start with AI-generated code, but you may modify, fix, or enhance it as needed. The goal is learning
+both how to guide AI effectively and when human intervention improves the result.
+Part 1: Technical Implementation (2 points)
+Create a webpage containing:
+1. Two clickable buttons
+a. "Buy a ticket" button
+b. "Redeem your ticket" button
+2. Interaction behavior
+a. When "Buy a ticket" is clicked → Display a success notification
+b. When "Redeem your ticket" is clicked → Display an error notification
+3. Design requirements
+a. Each notification must be appropriately designed for its purpose (success vs. error)
+b. Consider both the message content and visual presentation. Consider the context.
+Consider the constraints that might impact the interaction (phone vs. desktop, etc.)
+Technical specifications:
+● Use any mainstream AI tool (Aalto AI Assistant, Claude, GitHub Copilot, Aalto AI, ChatGPT, etc.)
+● Save all prompts used during development
+● The final solution must work in Chrome/Firefox/Safari
+● Both buttons should always be clickabl
+
+Perplexity answere  1: 
+To start building the ticketing app with basic HTML, CSS, JS, and p5.js, a simple approach is to have two buttons for "Buy a ticket" and "Redeem your ticket." Each button click triggers notifications styled differently for success and error. Using p5.js mainly for visuals, notifications can be created in plain HTML/CSS/JS, and the p5.js canvas used for background or animations.
+
+Based on searched sources and best practices for toast notifications and alert design, a straightforward plan is:
+
+- Create HTML section with two buttons always clickable.
+- Create notification containers that appear on button clicks with different background colors (green for success, red for error).
+- Implement logic: Buying a ticket shows success notification, redeeming a ticket shows an error notification (since new ticket cannot be bought before redeeming the old).
+- Use CSS for styling the notifications distinctively and responsively.
+- Use JavaScript to handle button clicks and toggle notification visibility.
+- p5.js can be used in the background or to add animated effects behind the UI but the core notification can be done in plain JS.
+
+Next, I can generate code implementing this simple UI and interaction with p5.js included for a visual effect. Would you like me to provide the complete code for your described scenario now?
+
+[1](https://editor.p5js.org/andytilia/sketches/_XHxfxi9E)
+[2](https://editor.p5js.org/enickles/sketches/2iqajlGso)
+[3](https://itpnyu.github.io/p5ble-website/docs/start-stop-notifications)
+[4](https://p5js.org/examples/)
+[5](https://stackoverflow.com/questions/78302100/mapping-p5-js-to-arduino-potentiometers-and-push-buttons)
+[6](https://stackoverflow.com/questions/8965018/dynamically-creating-bootstrap-css-alert-messages)
+[7](https://medium.muz.li/ui-ux-case-study-the-best-way-to-purchase-a-ticket-for-your-favorite-festival-be77ff94ece7)
+[8](https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-serial-output-from-p5-js/)
+[9](https://www.youtube.com/watch?v=JTj3ABRpeVc)
+[10](https://workspace.google.com/marketplace/app/qr_code_ticket_per_response_for_checkin/1028329904752)
+[11](https://stackoverflow.com/questions/51285683/p5-js-alert-is-spammed)
+[12](https://www.w3schools.com/howto/howto_js_alert.asp)
+[13](https://www.youtube.com/watch?v=Jo9yksmQRrk)
+[14](https://discourse.holoviz.org/t/p5-js-example/1551)
+[15](https://speckyboy.com/css-js-notification-alert-code/)
+[16](https://dribbble.com/search/purchase-ticket-ui)
+[17](https://p5js.org/tutorials/p5js-with-screen-reader/)
+[18](https://www.raviwebcodes.com/how-to-create-toast-notifications-in-html-css-javascript-success-error-warning-info/)
+[19](https://convin.ai/blog/online-ticket-booking)
+[20](https://www.geeksforgeeks.org/javascript/how-to-make-a-toast-notification-in-html-css-and-javascript/)
+
+Perplexity prompt 2: Generate initial AI prompt to produce HTML/CSS/JS with p5.js for this scenario
+
+perplexity answere  2:
+Here’s an initial AI prompt you can use to generate your ticket scenario app with HTML, CSS, JavaScript, and the p5.js library:
+
+***
+
+Build a complete HTML, CSS, and JS solution for a simple ticket scenario for a fictional movie theater called "Marko's Wonderland."  
+**Requirements:**  
+- Include the p5.js library.
+- Create two large, always-clickable buttons:  
+  - "Buy a ticket"  
+  - "Redeem your ticket"  
+- When "Buy a ticket" is clicked, show a visually distinct success notification (e.g., green bar or toast) saying the ticket was bought.
+- When "Redeem your ticket" is clicked, show a visually distinct error notification (e.g., red bar or toast) saying redeeming failed.
+- Notifications must match their type (success or error) with clear text and color.
+- Make sure the UI and notifications work well on both desktop and mobile.
+- The buttons should remain enabled/active at all times.
+- Use p5.js for a simple but eye-catching animated or visual background behind the app interface.
+- Do not implement actual ticketing state or backend—keep the logic scenario-specific and minimal.
+
+**Provide:**  
+- The HTML (with linked p5.js)  
+- The CSS for layout and notifications  
+- The full JavaScript.  
+All code must be in a single-page, ready-to-use format.
+
+---
+
+[1](https://p5js.org/tutorials/criticalai2-prompt-battle/)
+[2](https://p5js.org/tutorials/criticalai1-chatting-with-about-code/)
+[3](https://processing-with-ai.gitlab.io/part2/programming/)
+[4](https://www.ashryan.io/ai-powered-fun-in-p5-js/)
+[5](https://www.codewithfaraz.com/content/336/build-ai-prompt-ui-with-html-css-and-javascript-step-by-step-tutorial)
+[6](https://www.youtube.com/watch?v=My0M-a4FSMc)
+[7](https://www.tiktok.com/@joshsowin/video/7172998987794959659)
+[8](https://www.reddit.com/r/weirdGPT/comments/zctadk/p5js_code_entirely_generated_in_chatgpt_prompt_in/)
+[9](https://editor.p5js.org/sarahciston/sketches/siBTII_bC/)
+[10](https://deepgram.com/ai-apps/textgptp5)
+
+
+Perplexity prompt 3: Okay, now generate the code
+
+Here is the complete code for your scenario. This file includes HTML, CSS, JavaScript, and p5.js for a visual background. You can copy and run as a single file. The buttons are always clickable; notifications appear styled as success (green) or error (red).
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marko's Wonderland Ticket System</title>
+  <!-- p5.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      text-align: center;
+      z-index: 2;
+      width: 90vw;
+      max-width: 400px;
+      background: rgba(255,255,255,0.85);
+      padding: 2em 1em 1.5em 1em;
+      border-radius: 13px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.15);
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+    }
+    button {
+      font-size: 1.08em;
+      padding: 0.9em 2em;
+      margin: 1em;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.09);
+    }
+    .buy-btn { background: #47d16a; color: #fff; }
+    .buy-btn:hover { background: #3cbb5d; }
+    .redeem-btn { background: #e84444; color: #fff; }
+    .redeem-btn:hover { background: #cd3131; }
+
+    .notification {
+      display: none;
+      width: 90%;
+      margin: 0.7em auto;
+      padding: 0.95em 1em;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: 500;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+      z-index: 3;
+      letter-spacing: 0.2px;
+    }
+    .notification.success {
+      background: #47d16a;
+      color: #fff;
+      border-left: 6px solid #26994c;
+    }
+    .notification.error {
+      background: #f74545;
+      color: #fff;
+      border-left: 6px solid #991e1e;
+    }
+    @media (max-width: 600px) {
+      .container {
+        width: 98vw;
+        max-width: none;
+        padding: 1.5em 0.3em 1.2em 0.3em;
+      }
+      button { font-size: 1em; padding: 0.8em 1.2em; margin: 0.7em; }
+      .notification { font-size: 0.98em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Marko's Wonderland</h2>
+    <p>Online Ticketing</p>
+    <div id="successNotif" class="notification success">Ticket purchased successfully! Please redeem it at the inspector before buying another.</div>
+    <div id="errorNotif" class="notification error">Error: You cannot redeem your ticket like this. Please see the inspector at the entrance.</div>
+    <button class="buy-btn" onclick="showSuccess()">Buy a ticket</button>
+    <button class="redeem-btn" onclick="showError()">Redeem your ticket</button>
+  </div>
+  <script>
+    function showSuccess() {
+      hideNotifications();
+      let n = document.getElementById('successNotif');
+      n.style.display = 'block';
+      setTimeout(hideNotifications, 2200);
+    }
+    function showError() {
+      hideNotifications();
+      let n = document.getElementById('errorNotif');
+      n.style.display = 'block';
+      setTimeout(hideNotifications, 2200);
+    }
+    function hideNotifications() {
+      document.getElementById('successNotif').style.display = 'none';
+      document.getElementById('errorNotif').style.display = 'none';
+    }
+  </script>
+  <!-- p5.js CANVAS FOR VISUAL BACKGROUND -->
+  <script>
+    let colours=["#e84444","#47d16a","#ffe966","#876ff7"];
+    function setup() {
+      let cnv = createCanvas(windowWidth, windowHeight);
+      cnv.position(0,0);
+      cnv.style('z-index','1');
+      cnv.style('position','fixed');
+      cnv.style('top','0');
+      cnv.style('left','0');
+      noStroke();
+    }
+    function draw() {
+      background(244, 243, 255);
+      for (let i = 0; i < 30; i++) {
+        let t = millis() * 0.0006;
+        let r = map(sin(i + t), -1,1, 50, 145 + i*2);
+        fill(colours[i%colours.length] + "b3");
+        ellipse(
+          width/2 + sin(i*1.2 + t)*180,
+          height/2 + cos(i*2.3 + t*1.5)*140,
+          r, r
+        );
+      }
+    }
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
+    }
+  </script>
+</body>
+</html>
+```
+This code meets your scenario requirements, is compatible on major browsers, looks good on mobile and desktop, and uses p5.js for appealing visuals in the background.[1][2][3][4]
+
+[1](https://editor.p5js.org/andytilia/sketches/_XHxfxi9E)
+[2](https://p5js.org/examples/)
+[3](https://www.raviwebcodes.com/how-to-create-toast-notifications-in-html-css-javascript-success-error-warning-info/)
+[4](https://www.geeksforgeeks.org/javascript/how-to-make-a-toast-notification-in-html-css-and-javascript/)
+
+
+
+Make it less colored and dark theme. Add some slow movement. make separate files.
+
+***
+
+(index.html, style.css, script.js ja p5.js-osio, kuten aiemmin annettu tummalla teemalla)
+
+***
+
 copilot_conversation:
 
 User prompt 1:
@@ -411,84 +690,7 @@ I'll add your latest prompt to the copilot_conversation.txt file.
 
 Perpexlisity ai and commet browser:
 
-Tiedostojen lataaminen ei ole tuettu tässä ympäristössä. Voin kuitenkin tuottaa koko keskustelun tekstin kopioitavaksi, jonka voit itse tallentaa txt-tiedostoksi.
 
-***
-
-**Koko keskustelu tekstimuodossa:**
-
-***
-
-Okay let's start building this app. Here is the things you need to keep in mind. I want to use basic html,css js but also p5.js library to make site visually appearing. The Scenario
-A tiny village in the middle of nowhere has one movie theater: *Marko's Wonderland*. Movie tickets can only be bought online and only one ticket at a time. The ticket must be redeemed in the presence of the inspector before entering the show. Most importantly, you cannot purchase a new ticket before redeeming the previously bought one.
-Your job is to build a simple version of their ticket system. In this scenario, a user attempts to buy a ticket and later tries to redeem it, encountering specific outcomes.
-Note: Implement only the specific scenario described. No need for a complete ticketing system or complex state management.
-
-Instructions
-Pick an AI tool (Aalto AI Assistant, Claude, etc.) begin by using it to generate code for your webpage. You must start with AI-generated code, but you may modify, fix, or enhance it as needed. The goal is learning both how to guide AI effectively and when human intervention improves the result.
-
-Part 1: Technical Implementation (2 points)
-Create a webpage containing:
-1. Two clickable buttons
-   a. "Buy a ticket" button
-   b. "Redeem your ticket" button
-2. Interaction behavior
-   a. When "Buy a ticket" is clicked → Display a success notification
-   b. When "Redeem your ticket" is clicked → Display an error notification
-3. Design requirements
-   a. Each notification must be appropriately designed for its purpose (success vs. error)
-   b. Consider both the message content and visual presentation. Consider the context.
-   c. Consider the constraints that might impact the interaction (phone vs. desktop, etc.)
-
-Technical specifications:
-● Use any mainstream AI tool (Aalto AI Assistant, Claude, GitHub Copilot, Aalto AI, ChatGPT, etc.)
-● Save all prompts used during development
-● The final solution must work in Chrome/Firefox/Safari
-● Both buttons should always be clickabl
-
-***
-
-Generate initial AI prompt to produce HTML/CSS/JS with p5.js for this scenario
-
-***
-
-Build a complete HTML, CSS, and JS solution for a simple ticket scenario for a fictional movie theater called "Marko's Wonderland."
-Requirements:
-- Include the p5.js library.
-- Create two large, always-clickable buttons:
-  - "Buy a ticket"
-  - "Redeem your ticket"
-- When "Buy a ticket" is clicked, show a visually distinct success notification (e.g., green bar or toast) saying the ticket was bought.
-- When "Redeem your ticket" is clicked, show a visually distinct error notification (e.g., red bar or toast) saying redeeming failed.
-- Notifications must match their type (success or error) with clear text and color.
-- Make sure the UI and notifications work well on both desktop and mobile.
-- The buttons should remain enabled/active at all times.
-- Use p5.js for a simple but eye-catching animated or visual background behind the app interface.
-- Do not implement actual ticketing state or backend—keep the logic scenario-specific and minimal.
-
-Provide:
-- The HTML (with linked p5.js)
-- The CSS for layout and notifications
-- The full JavaScript.
-All code must be in a single-page, ready-to-use format.
-
-***
-
-Okay, now generate the code
-
-***
-
-(code: HTML, CSS, JS & p5.js, kuten aiemmin annettu)
-
-***
-
-Make it less colored and dark theme. Add some slow movement. make separate files.
-
-***
-
-(index.html, style.css, script.js ja p5.js-osio, kuten aiemmin annettu tummalla teemalla)
-
-***
 
 Mikä voisi olla loogisin käyttäjäpolku lipun ostoon.
 
@@ -560,3 +762,152 @@ Tee suunnitelma miten käytän värejä misäkin.
 ***
 
 Kopioi yllä oleva teksti ja tallenna se omaan txt-tiedostoosi!
+
+Certainly! Here’s the full sequence of accessible text, info/error message, color, and advanced accessibility best practices prompts and answers—all in plain text form for easy copy-paste.
+
+***
+
+**PROMPT:**  
+How to make better accessible text. That makes ux better and are more understandable
+
+**ANSWER:**  
+To make text more accessible and improve user experience (UX), focus on clarity, readability, and inclusivity in your writing and design choices. Accessible text is easier to understand, interact with, and benefits all users, including those with disabilities.
+
+Key Principles for Accessible Text:
+- Use plain language that avoids jargon, idioms, or region-specific expressions.
+- Keep sentences and paragraphs short and direct.
+- Structure content with headings, subheadings, and bullet points to break up information and create a clear hierarchy.
+- Ensure text resizes well and remains readable at different sizes.
+- Select familiar, legible fonts (preferably sans-serif) and avoid all caps, excessive italics, or underlining.
+- Use high-contrast color schemes for text and backgrounds.
+- Always use live text instead of text within images, and provide meaningful alt text for icons and images.
+- Make link text descriptive, so users know what happens when a link is clicked (“Download report” rather than “Click here”).
+- Support multiple modes of understanding (icons, captions, transcripts).
+- Label form fields clearly and persistently, never relying solely on placeholder text.
+- Test content with diverse users, including those with disabilities.
+
+Improving Understandability and UX:
+- Chunk information into sections focused on one idea.
+- Use descriptive subheadings.
+- Left-align text for better readability.
+- Aim for an 8th-grade reading level for general users.
+- Consistency in style, labels, and interaction patterns reduces confusion.
+
+Accessible text should be clear, concise, and easy for everyone to understand and interact with.
+
+***
+
+**PROMPT:**  
+How about info and error text
+
+**ANSWER:**  
+To make info and error text more accessible and user-friendly, focus on clarity, actionable language, visibility, and providing helpful context.
+
+Accessible Info Text:
+- Use short, clear, and descriptive language.
+- Place info text near relevant content and use clear headings.
+- Avoid vague terms; every sentence should have a purpose.
+- Make status or confirmation messages accessible to screen readers (use ARIA live regions).
+- Use high contrast and, if appropriate, supporting icons—never rely solely on color.
+
+Accessible Error Text:
+- Show error messages close to the field/step with the problem.
+- Make errors highly visible—bold, icons, high-contrast backgrounds.
+- Write specific, plain-language instructions telling users what went wrong and how to fix it.
+- Avoid technical jargon; keep error language supportive and neutral.
+- For multiple errors, display a summary at the top and visually guide focus to the problems.
+- Announce errors programmatically for screen readers (`role="alert"` or ARIA).
+- Test error messages with users, including those with disabilities.
+
+Summary Table: Info vs Error Text
+
+| Aspect       | Info Text          | Error Text           |
+|--------------|--------------------|----------------------|
+| Tone         | Friendly           | Supportive, neutral  |
+| Placement    | Near content       | Near error source    |
+| Clarity      | Easy to scan       | Actionable steps     |
+| Accessibility| SR announced, icons| ARIA, not color-only |
+
+***
+
+**PROMPT:**  
+Show examples of accessible info and error text for forms
+
+**ANSWER:**  
+Examples of accessible info and error text for forms:
+
+Accessible Info Text Examples:
+- Success: “Your payment was successful. Thank you for your order!”
+- Instructions: “Passwords must be at least 8 characters and include a number.” or “Your username will be visible to other users.”
+- Status Update: “Profile updated on 29 October 2025.”
+
+Accessible Error Text Examples:
+- Error Summary:  
+  “There are 3 problems with your submission:  
+    - Email address is missing.  
+    - Password must be at least 8 characters.  
+    - Date must be in MM/DD/YYYY format.”
+- Inline Error Message (next to fields):  
+  Email: “Please enter a valid email address (example: yourname@email.com).”  
+  Password: “Password must contain at least 8 characters and include a number.”  
+  Date: “Date must be in MM/DD/YYYY format, e.g., 10/29/2025.”
+- Technical Error:  
+  “Card was declined. Try a different card or contact your bank.”
+
+Accessibility features:
+- Error messages linked with `aria-describedby`, `aria-invalid="true"`, and announced for screen readers using ARIA live regions or roles.
+- Visual cues (like icons) accompany, but never sole indication.
+
+***
+
+**PROMPT:**  
+How about colours in those error and info text box
+
+**ANSWER:**  
+Accessible colors for error and info text boxes must meet contrast guidelines and never rely on color alone.
+
+Error Text Box Colors:
+- Common: Red or dark red backgrounds (e.g., #D32F2F) with white or very dark text.
+- Contrast: At least a 4.5:1 ratio for regular text, 3:1 for large/UI text.
+- Use color + text + icon. Never identify errors by color alone.
+- Avoid: Light/pale colors and low-contrast combos.
+
+Info Text Box Colors:
+- Common: Blue (#1976D2), green (#388E3C), or subtle gray backgrounds.
+- Contrast: Maintain at least a 4.5:1 ratio between foreground and background.
+- Use borders, icons, and text.
+
+Table:
+
+| Box Type | Background      | Text         | Contrast Ratio | Cues           |
+|----------|-----------------|--------------|---------------|----------------|
+| Error    | #D32F2F (red)   | White/Black  | 4.5:1         | Icon, label    |
+| Info     | #1976D2 (blue)  | White/Black  | 4.5:1         | Icon, label    |
+
+Always validate color combos with contrast checkers, and never communicate meaning by color alone.
+
+***
+
+**PROMPT:**  
+Next
+
+**ANSWER:**  
+Continue with further accessible practices:
+
+Keyboard Accessibility:
+- All form fields, info, and error messages must be accessible via keyboard alone.
+- Error/info messages must be announced but not trap focus.
+
+Screen Reader Support:
+- Use `role="alert"` and ARIA attributes (`aria-live`, `aria-describedby`) to signal messages to screen readers.
+- Fields and errors must be labelled and linked.
+
+Consistency:
+- Keep styling, icons, placement of info and error boxes uniform across all forms.
+- Error summaries at the top should match inline errors.
+
+Other Tips:
+- Test forms with both automated tools and people with disabilities.
+- Avoid UI disruptions (timeouts, popups) during form fill.
+
+***
